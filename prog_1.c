@@ -60,17 +60,21 @@ void display(){
     }
 }
 
-int main(){
-    char test[30] = "a+({b+c";
-    for(int i = 0; test[i] != '\0'; i++){
-        push(test[i]);
-    }
-    display();
+void checkParanthesis(){
     if(paranthesisCount % 2 == 0 && curlyParanthesisCount % 2 == 0 && bigParanthesisCount % 2 == 0){
         printf("The mathematical expression has balanced number of paranthesis.\n");
     }
     else{
         printf("The mathematical expression doesn't have balanced number of paranthesis.\n");
     }
+}
+
+int main(){
+    char test[30] = "a+({b+c)";
+    for(int i = 0; test[i] != '\0'; i++){
+        push(test[i]);
+    }
+    display();
+    checkParanthesis();
     return 0;
 }
