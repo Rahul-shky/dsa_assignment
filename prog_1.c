@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 10
-int stack[MAX];
+#define MAX 20
+char stack[MAX];
 int top = -1;
+int paranthesisCount = 0;
+int curlyParanthesisCount = 0;
+int bigParanthesisCount = 0;
 
 int isFull(){
     return top == MAX - 1;
@@ -12,24 +15,33 @@ int isEmpty(){
     return top == -1;
 }
 
-void push(int value){
+void push(char value){
     if(isFull()){
         printf("The stack is full.\n");
     }
     else{
+        if(value == '(' || value == ')'){
+            paranthesisCount++;
+        }
+        else if(value == '{' || value == '}'){
+            curlyParanthesisCount++;
+        }
+        else if(value == '[' || value == ']'){
+            bigParanthesisCount++;
+        }
         stack[++top] = value;
-        printf("%d has been pushed.\n",value);
+        printf("%c has been pushed.\n",value);
     }
 }
 
-int pop(){
+char pop(){
     if(isEmpty()){
         printf("The stack is empty.\n");
-        return -1;
+        return '\0';
     }
     else{
-        int popped = stack[top--];
-        printf("%d has been popped.\n",popped);
+        char popped = stack[top--];
+        printf("%c has been popped.\n",popped);
         return popped;
     }
 }
@@ -42,18 +54,35 @@ void display(){
         printf("Stack elements:\n");
         for (int i = 0; i <= top; i++)
         {
-            printf("%d\n", stack[i]);
+            printf("%c\n", stack[i]);
         }
         printf("\n");
     }
 }
 
 int main(){
-    push(10);
-    push(20);
-    push(100);
-    display();
-    pop();
-    display();
+    push('m');
+    push('+');
+    push('[');
+    push('a');
+    push('-');
+    push('b');
+    push('*');
+    push('(');
+    push('c');
+    push('+');
+    push('d');
+    push('*');
+    push('{');
+    push('m');
+    push(')');
+    push(']');
+    push('}');
+    if(paranthesisCount % 2 == 0 && curlyParanthesisCount % 2 == 0 && bigParanthesisCount % 2 == 0){
+        printf("The mathematical expression has balanced number of paranthesis.\n");
+    }
+    else{
+        printf("The mathematical expression doesn't have balanced number of paranthesis.\n");
+    }
     return 0;
 }
