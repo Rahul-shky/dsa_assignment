@@ -70,7 +70,7 @@ void checkParanthesis(){
 }
 
 int main(){
-    char test[30] = "a+({b+c)";
+    char test[30] = "m+[a-b*(c+d*{m)]";
     for(int i = 0; test[i] != '\0'; i++){
         push(test[i]);
     }
