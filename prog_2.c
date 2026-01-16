@@ -135,7 +135,7 @@ void checkExpression(char exp[]){
 }
 
 int main(){
-    char test[30] = "2+3*4-5^2/5"; // 2+12-25/5 = 14-5 = 9
+    char test[30] = "2+3*4-5^2/5";
     checkExpression(test);
     printf("Postfix Expression: %s\n", postfixExp);
     printf("Evaluation Result: %d\n", evaluatePostfix(postfixExp));
