@@ -41,9 +41,7 @@ int main() {
     head = insertEnd(head, 20);
     head = insertEnd(head, 30);
     head = insertEnd(head, 40);
-
     printf("Reverse Traversal of Linked List:\n");
     reverseTraverse(head);
-
     return 0;
 }

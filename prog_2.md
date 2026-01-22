@@ -8,8 +8,4 @@ Now to evaluate the postfix mathematical expression, we have created an evaluate
 
 Inside the main function we created an array called test that strores the mathematical expression. Then we called the checkExpression() function that converts the infix mathematical expression to postfix. Then, we print the output and also evaluate the expression with the help of evaluatePostfix() function.
 
-<<<<<<< HEAD
 ![alt text](./output_img/prog_2.png)
-=======
-![alt text](./output_img/prog_2.png)
->>>>>>> 1088ebfa0e82d0953c3f283f905ab88f9e98c2a7
