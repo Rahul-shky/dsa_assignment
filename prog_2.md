@@ -7,3 +7,5 @@ For the conversion of infix mathematical expression to postfix we have declared 
 Now to evaluate the postfix mathematical expression, we have created an evaluatePostfix() function. This function runs till the array is not empty. First, it checks if the element is a digit. We use the isdigit() function from the <ctype.h> library. If it is a digit then we push it to evalStack else we pop two values from the evalStack and check the incoming operator and perform the operations accordingly. At the end we return the final evaluated answer. Hence in this way we evaluated the postfix mathematical expression.
 
 Inside the main function we created an array called test that strores the mathematical expression. Then we called the checkExpression() function that converts the infix mathematical expression to postfix. Then, we print the output and also evaluate the expression with the help of evaluatePostfix() function.
+
+![alt text](./output_img/prog_2.png)
