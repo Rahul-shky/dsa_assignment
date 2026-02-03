@@ -67,7 +67,7 @@ int main() {
         printf("Enter the array[%d]:",i);
         scanf("%d",&arr[i]);
     }
-    int minHeap[10], maxHeap[10];
+    int minHeap[n], maxHeap[n];
     for (int i = 0; i < n; i++) {
         minHeap[i] = arr[i];
         maxHeap[i] = arr[i];
