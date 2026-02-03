@@ -1,4 +1,4 @@
-# Given the array of the data (unsorted), Write a program to build the min and max heap.
+# Q.6 Given the array of the data (unsorted), Write a program to build the min and max heap.
 
 # Data Structure:
 In this program, we have used array representation of heap. A heap is a complete binary tree that satisfies the heap property. We have defined two types of heap and they are min-heap and max-heap. The min-heap wil have it's parents node value less than the child node values and the root always contain the minimum element whereas it's the exact opposite for the max-heap. 
@@ -8,7 +8,7 @@ In this program, we have used array representation of heap. A heap is a complete
 This function swaps two integer values using pointers. It uses a temporary variable "temp" to hold one value during swap.
 
 ## 2. void minHeapify(int arr[], int n, int i):
-This function maintains the min-heap property starting from node i. It ensures parent nodes are smaller than or equal to child nodes. If a child is smaller it swaps it with the smallest child. It recursively fiexes the heap downward.
+This function maintains the min-heap property starting from node i. It ensures parent nodes are smaller than or equal to child nodes. If a child is smaller it swaps it with the smallest child. It recursively fixes the heap downward.
 
 ## 3. void maxHeapify(int arr[], int n, int i):
 This function maintains the max-heap property starting from node i. It  ensures parent nodes are larger than or equal to child nodes. It works similarly to minHeapify but compares for larger values.
