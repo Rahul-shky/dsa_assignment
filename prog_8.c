@@ -118,7 +118,7 @@ int main(){
             break;
         case 4:
             mergeSort(arr, 0, N-1, &comparisons);
-            swaps = 0; // Merge sort doesn’t use swaps directly
+            swaps = 0; 
             break;
         default:
             printf("Invalid choice!\n");
